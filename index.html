@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>zufhi.org - Üdvözöllek!</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    h1 {
+      font-weight: 600;
+      font-size: 3rem;
+      margin: 0 0 0.5em 0;
+      animation: fadeInDown 1s ease forwards;
+    }
+
+    p {
+      font-weight: 300;
+      font-size: 1.25rem;
+      margin: 0;
+      animation: fadeInUp 1s ease forwards;
+      animation-delay: 0.5s;
+      opacity: 0;
+    }
+
+    @keyframes fadeInDown {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+      }
+    }
+
+    .highlight {
+      color: #ffdd57;
+      font-weight: 600;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 10px;
+      font-size: 0.9rem;
+      opacity: 0.7;
+      font-weight: 300;
+    }
+  </style>
+</head>
+<body>
+  <h1>Üdvözöllek a <span class="highlight">zufhi.org</span> oldalon!</h1>
+  <p>Még dolgozom rajta, de ha meglesz az új router tökéletes lesz.</p>
+
+  <footer>© 2025 zufhi.org</footer>
+</body>
+</html>
