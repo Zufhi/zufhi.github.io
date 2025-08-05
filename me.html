@@ -25,6 +25,11 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
+      <span class="navTrigger">
+        <i></i>
+        <i></i>
+        <i></i>
+      </span>
     </div>
   </nav>
 
@@ -35,6 +40,16 @@
   </header>
 
   <footer>©2025 zufhi.org</footer>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const navTrigger = document.querySelector('.navTrigger');
+    const mainListDiv = document.getElementById('mainListDiv');
 
+    navTrigger.addEventListener('click', function () {
+      this.classList.toggle('active');
+      mainListDiv.classList.toggle('show_list');
+    });
+  });
+</script>
 </body>
 </html>
