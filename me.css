@@ -89,7 +89,7 @@ body, html {
 .hero {
   width: 100%;
   height: 100vh;
-  background: url('IMG_9002.jpg') no-repeat center center/cover;
+  background: url('IMG_90021.jpg') no-repeat center center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -127,4 +127,91 @@ footer {
   padding: 20px;
   background: #111;
   opacity: 0.7;
+}
+
+/* Mobile menu toggle */
+.navTrigger {
+  display: none;
+  cursor: pointer;
+  width: 30px;
+  height: 25px;
+  position: absolute;
+  right: 30px;
+  top: 20px;
+  z-index: 3;
+}
+
+.navTrigger i {
+  background-color: white;
+  border-radius: 2px;
+  display: block;
+  height: 4px;
+  margin: 5px 0;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+/* Hamburger animation */
+.navTrigger.active i:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.navTrigger.active i:nth-child(2) {
+  opacity: 0;
+}
+.navTrigger.active i:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Hide nav links on mobile */
+@media screen and (max-width: 768px) {
+  .navTrigger {
+    display: block;
+  }
+
+  .main_list {
+    display: none;
+    width: 100%;
+    background-color: #111;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    z-index: 2;
+  }
+
+  .main_list.show_list {
+    display: block;
+  }
+
+  .navlinks {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .navlinks li {
+    text-align: center;
+    padding: 12px 0;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .navlinks li + li {
+    border-top: none;
+  }
+
+  .navlinks li a {
+    font-size: 2rem;
+    color: white;
+    display: block;
+    width: 100%;
+    padding: 12px 0 !important;
+    text-align: center;
+  }
+
+  .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    width: 100%;
+  }
 }
